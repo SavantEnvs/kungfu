@@ -1,0 +1,9 @@
+project: savantenvs/kungfu
+target: fuzz_compile_schema
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_compile_schema/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_compile_schema
+    libfuzzer: true
+    timeout: 5

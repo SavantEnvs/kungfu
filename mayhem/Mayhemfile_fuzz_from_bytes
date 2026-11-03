@@ -1,0 +1,9 @@
+project: savantenvs/kungfu
+target: fuzz_from_bytes
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_from_bytes/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_from_bytes
+    libfuzzer: true
+    timeout: 5

@@ -1,0 +1,9 @@
+project: savantenvs/kungfu
+target: fuzz_bind_frame
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_bind_frame/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_bind_frame
+    libfuzzer: true
+    timeout: 5
